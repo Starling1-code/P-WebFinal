@@ -1,0 +1,75 @@
+﻿@model IEnumerable<P_WebFinal.Models.Pelicula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TituloP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneroP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AñoP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DirectorP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionP)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TituloP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneroP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AñoP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectorP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionP)
+            </td>
+        </tr>
+
+        <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> Titulo: @Html.DisplayFor(modelItem => item.TituloP)</h5> 
+    <p class="card-text"> Descripcion: @Html.DisplayFor(modelItem => item.DescripcionP)</p>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> Genero: @Html.DisplayFor(modelItem => item.GeneroP)</li>
+    <li class="list-group-item"> Año: @Html.DisplayFor(modelItem => item.AñoP)</li>
+  </ul>
+  <div class="card-body">
+                <a asp-action="Edit" asp-route-id="@item.IdP">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdP">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdP">Delete</a>
+  </div>
+</div>
+}
+    </tbody>
+</table>
+
+
+ 
