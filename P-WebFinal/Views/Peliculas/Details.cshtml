@@ -4,45 +4,50 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalle de Pelicula</h1>
 
 <div>
-    <h4>Pelicula</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TituloP)
+            @Html.DisplayNameFor(model => model.Titulo)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TituloP)
+            @Html.DisplayFor(model => model.Titulo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GeneroP)
+            @Html.DisplayNameFor(model => model.Genero)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GeneroP)
+            @Html.DisplayFor(model => model.Genero)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AñoP)
+            @Html.DisplayNameFor(model => model.Año)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AñoP)
+            @Html.DisplayFor(model => model.Año)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DirectorP)
+            @Html.DisplayNameFor(model => model.Director)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DirectorP)
+            @Html.DisplayFor(model => model.Director)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DescripcionP)
+            @Html.DisplayNameFor(model => model.Descripcion)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DescripcionP)
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Imagen)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdP">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+     <a asp-action="Edit" asp-route-id="@Model?.IdP" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
 </div>

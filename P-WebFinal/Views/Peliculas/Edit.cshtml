@@ -4,9 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Editar Pelicula</h1>
 
-<h4>Pelicula</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,40 +14,44 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdP" />
             <div class="form-group">
-                <label asp-for="TituloP" class="control-label"></label>
-                <input asp-for="TituloP" class="form-control" />
-                <span asp-validation-for="TituloP" class="text-danger"></span>
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GeneroP" class="control-label"></label>
-                <input asp-for="GeneroP" class="form-control" />
-                <span asp-validation-for="GeneroP" class="text-danger"></span>
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AñoP" class="control-label"></label>
-                <input asp-for="AñoP" class="form-control" />
-                <span asp-validation-for="AñoP" class="text-danger"></span>
+                <label asp-for="Año" class="control-label"></label>
+                <input asp-for="Año" class="form-control" />
+                <span asp-validation-for="Año" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DirectorP" class="control-label"></label>
-                <input asp-for="DirectorP" class="form-control" />
-                <span asp-validation-for="DirectorP" class="text-danger"></span>
+                <label asp-for="Director" class="control-label"></label>
+                <input asp-for="Director" class="form-control" />
+                <span asp-validation-for="Director" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DescripcionP" class="control-label"></label>
-                <input asp-for="DescripcionP" class="form-control" />
-                <span asp-validation-for="DescripcionP" class="text-danger"></span>
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div><br>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary" class="bi bi-folder-plus">Volver</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

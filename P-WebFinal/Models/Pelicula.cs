@@ -5,11 +5,13 @@ namespace P_WebFinal.Models
 {
     public partial class Pelicula
     {
+
         public int IdP { get; set; }
-        public string? TituloP { get; set; }
-        public string? GeneroP { get; set; }
-        public DateTime? AñoP { get; set; }
-        public string? DirectorP { get; set; }
-        public string? DescripcionP { get; set; }
+        public string? Titulo { get; set; }
+        public string? Genero { get; set; }
+        public DateTime? Año { get; set; }
+        public string? Director { get; set; }
+        public string? Descripcion { get; set; }
+        public string? Imagen { get; set; }
     }
 }

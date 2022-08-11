@@ -25,6 +25,7 @@ namespace P_WebFinal.Controllers
                           View(await _context.Peliculas.ToListAsync()) :
                           Problem("Entity set 'CineVirtualContext.Peliculas'  is null.");
         }
+       
 
         // GET: Peliculas/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -55,8 +56,11 @@ namespace P_WebFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdP,TituloP,GeneroP,AñoP,DirectorP,DescripcionP")] Pelicula pelicula)
+        public async Task<IActionResult> Create([Bind("IdP,Titulo,Genero,Año,Director,Descripcion,Imagen")] Pelicula pelicula)
         {
+
+             
+
             if (ModelState.IsValid)
             {
                 _context.Add(pelicula);
@@ -87,7 +91,7 @@ namespace P_WebFinal.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdP,TituloP,GeneroP,AñoP,DirectorP,DescripcionP")] Pelicula pelicula)
+        public async Task<IActionResult> Edit(int id, [Bind("IdP,Titulo,Genero,Año,DirectorP,Descripcion,Imagen")] Pelicula pelicula)
         {
             if (id != pelicula.IdP)
             {
